@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Code2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -27,14 +28,14 @@ const Home = () => {
           Sharpen your coding skills, track your journey, and explore handpicked resources like CP sheets, YouTube tutorials, blogs & more.
         </p>
 
-        <motion.a
-          href="/questions"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold px-6 py-3 rounded-full shadow-lg transition"
-        >
-          🚀 Get Started
-        </motion.a>
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <Link
+            to="/questions"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold px-6 py-3 rounded-full shadow-lg transition"
+          >
+            🚀 Get Started
+          </Link>
+        </motion.div>
       </motion.div>
     </div>
   );
