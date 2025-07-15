@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
 import { LockKeyhole } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; 
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -73,11 +74,11 @@ const Login = () => {
           </button>
         </form>
         <p className="mt-4 text-center text-sm text-gray-600">
-          Don’t have an account?{" "}
-          <a href="/register" className="text-blue-600 hover:underline font-medium">
-            Register here
-          </a>
-        </p>
+  Don’t have an account?{" "}
+  <Link to="/register" className="text-blue-600 hover:underline font-medium">
+    Register here
+  </Link>
+</p>
       </motion.div>
     </div>
   );

@@ -3,6 +3,7 @@ import { registerUser } from "../services/auth.js";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { UserPlus } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const [formData, setFormData] = useState({ fullName: "", email: "", password: "" });
@@ -101,11 +102,11 @@ const Register = () => {
         </button>
 
         <p className="text-center text-sm text-gray-600 mt-2">
-          Already have an account?{" "}
-          <a href="/login" className="text-purple-600 hover:underline font-medium">
-            Login
-          </a>
-        </p>
+  Already have an account?{" "}
+  <Link to="/login" className="text-purple-600 hover:underline font-medium">
+    Login
+  </Link>
+</p>
       </motion.form>
     </div>
   );
